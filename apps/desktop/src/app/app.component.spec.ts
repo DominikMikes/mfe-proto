@@ -17,10 +17,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'navbar'`, () => {
+  it(`should have as title 'desktop'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('navbar');
+    expect(app.title).toEqual('desktop');
   });
 
   it('should render title', () => {
@@ -28,7 +28,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome navbar'
+      'Welcome desktop'
     );
   });
 });

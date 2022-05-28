@@ -1,17 +1,17 @@
 {
   "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
-  "sourceRoot": "apps/navbar-e2e/src",
+  "sourceRoot": "apps/desktop-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/navbar-e2e/cypress.json",
-        "devServerTarget": "navbar:serve:development"
+        "cypressConfig": "apps/desktop-e2e/cypress.json",
+        "devServerTarget": "desktop:serve:development"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "navbar:serve:production"
+          "devServerTarget": "desktop:serve:production"
         }
       }
     },
@@ -19,10 +19,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/navbar-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/desktop-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["navbar"]
+  "implicitDependencies": ["desktop"]
 }

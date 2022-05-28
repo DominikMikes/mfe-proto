@@ -1,0 +1,38 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/ui/menu/src",
+  "prefix": "mfe-proto",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/ui/menu"],
+      "options": {
+        "project": "libs/ui/menu/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ui/menu/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ui/menu/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui/menu"],
+      "options": {
+        "jestConfig": "libs/ui/menu/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ui/menu/**/*.ts", "libs/ui/menu/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

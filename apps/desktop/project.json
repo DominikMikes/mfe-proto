@@ -1,22 +1,22 @@
 {
   "projectType": "application",
-  "sourceRoot": "apps/navbar/src",
+  "sourceRoot": "apps/desktop/src",
   "prefix": "mfe-proto",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/navbar",
-        "index": "apps/navbar/src/index.html",
-        "main": "apps/navbar/src/main.ts",
-        "polyfills": "apps/navbar/src/polyfills.ts",
-        "tsConfig": "apps/navbar/tsconfig.app.json",
-        "assets": ["apps/navbar/src/favicon.ico", "apps/navbar/src/assets"],
-        "styles": ["apps/navbar/src/styles.css"],
+        "outputPath": "dist/apps/desktop",
+        "index": "apps/desktop/src/index.html",
+        "main": "apps/desktop/src/main.ts",
+        "polyfills": "apps/desktop/src/polyfills.ts",
+        "tsConfig": "apps/desktop/tsconfig.app.json",
+        "assets": ["apps/desktop/src/favicon.ico", "apps/desktop/src/assets"],
+        "styles": ["apps/desktop/src/styles.css"],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/navbar/webpack.config.js"
+          "path": "apps/desktop/webpack.config.js"
         }
       },
       "configurations": {
@@ -35,13 +35,13 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/navbar/src/environments/environment.ts",
-              "with": "apps/navbar/src/environments/environment.prod.ts"
+              "replace": "apps/desktop/src/environments/environment.ts",
+              "with": "apps/desktop/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/navbar/webpack.prod.config.js"
+            "path": "apps/desktop/webpack.prod.config.js"
           }
         },
         "development": {
@@ -59,35 +59,35 @@
       "executor": "@nrwl/angular:webpack-server",
       "configurations": {
         "production": {
-          "browserTarget": "navbar:build:production"
+          "browserTarget": "desktop:build:production"
         },
         "development": {
-          "browserTarget": "navbar:build:development"
+          "browserTarget": "desktop:build:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 5000,
-        "publicHost": "http://localhost:5000"
+        "port": 4000,
+        "publicHost": "http://localhost:4000"
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "navbar:build"
+        "browserTarget": "desktop:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/navbar/**/*.ts", "apps/navbar/**/*.html"]
+        "lintFilePatterns": ["apps/desktop/**/*.ts", "apps/desktop/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/navbar"],
+      "outputs": ["coverage/apps/desktop"],
       "options": {
-        "jestConfig": "apps/navbar/jest.config.ts",
+        "jestConfig": "apps/desktop/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -95,15 +95,15 @@
       "executor": "@nrwl/angular:file-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "navbar:build",
-        "port": 5000
+        "buildTarget": "desktop:build",
+        "port": 4000
       },
       "configurations": {
         "development": {
-          "buildTarget": "navbar:build:development"
+          "buildTarget": "desktop:build:development"
         },
         "production": {
-          "buildTarget": "navbar:build:production"
+          "buildTarget": "desktop:build:production"
         }
       }
     }
