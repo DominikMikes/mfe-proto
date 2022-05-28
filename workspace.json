@@ -4,6 +4,8 @@
   "projects": {
     "desktop": "apps/desktop",
     "desktop-e2e": "apps/desktop-e2e",
+    "navbar": "apps/navbar",
+    "navbar-e2e": "apps/navbar-e2e",
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e",
     "ui-menu": "libs/ui/menu"
