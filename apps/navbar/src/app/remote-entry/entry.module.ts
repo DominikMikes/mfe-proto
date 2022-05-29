@@ -3,17 +3,19 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
-import { UiMenuModule } from '@mfe-proto/ui/menu';
+// import { UiMenuModule } from '@mfe-proto/ui/menu';
+import { NavbarComponent } from '../components/navbar/navbar.component';
+import { AngularMaterialModule } from '@mfe-proto/angular-material';
 
 @NgModule({
-  declarations: [RemoteEntryComponent],
+  declarations: [RemoteEntryComponent, NavbarComponent],
   imports: [
     CommonModule,
-    UiMenuModule,
+    AngularMaterialModule,
     RouterModule.forChild([
       {
         path: '',
-        component: RemoteEntryComponent,
+        component: NavbarComponent,
       },
     ]),
   ],

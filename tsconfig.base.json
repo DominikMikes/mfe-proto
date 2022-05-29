@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@mfe-proto/angular-material": ["libs/angular-material/src/index.ts"],
       "@mfe-proto/ui/menu": ["libs/ui/menu/src/index.ts"]
     }
   },

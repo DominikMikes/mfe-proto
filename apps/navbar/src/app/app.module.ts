@@ -10,10 +10,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
+import { AngularMaterialModule } from '@mfe-proto/angular-material';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    AngularMaterialModule,
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],

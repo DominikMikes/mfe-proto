@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "angular-material": "libs/angular-material",
     "desktop": "apps/desktop",
     "desktop-e2e": "apps/desktop-e2e",
     "navbar": "apps/navbar",
