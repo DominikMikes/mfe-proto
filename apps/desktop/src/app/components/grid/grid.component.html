@@ -1,0 +1,12 @@
+<h2>Desktop remotes</h2>
+<mat-grid-list cols="2" rowHeight="150px" style="width: 50%;">
+  <mat-grid-tile *ngFor="let module of modules">
+    <mat-card class="my-card">
+      <mat-card-title>{{module.title}}</mat-card-title>
+      <mat-card-content>
+         {{module.content}}
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+

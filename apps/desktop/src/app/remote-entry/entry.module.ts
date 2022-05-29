@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
+import { AngularMaterialModule } from '@mfe-proto/angular-material';
+import { GridComponent } from '../components/grid/grid.component';
 
 @NgModule({
-  declarations: [RemoteEntryComponent],
+  declarations: [RemoteEntryComponent, GridComponent],
   imports: [
     CommonModule,
+    AngularMaterialModule,
     RouterModule.forChild([
       {
         path: '',
-        component: RemoteEntryComponent,
+        component: GridComponent,
       },
     ]),
   ],

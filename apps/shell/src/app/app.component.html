@@ -1,3 +1,11 @@
-<h1>SHELL</h1>
-<router-outlet></router-outlet>
-<router-outlet name="sidebar">
+<h1>SHELL Application</h1>
+<div>
+  <!-- default outlet for modules -->
+  <router-outlet></router-outlet>
+</div>
+
+<!-- outlet for sidebar -->
+<div class="sidebar">
+  <router-outlet name="sidebar"></router-outlet>
+</div>
+

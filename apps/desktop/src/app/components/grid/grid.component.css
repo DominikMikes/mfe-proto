@@ -1,0 +1,11 @@
+.mat-card {
+  background-color: lightskyblue;
+  border-radius: 4px;
+  width: 80%;
+  height: 100px;
+  cursor: pointer;
+}
+
+.mat-card:hover {
+  background-color: rgb(104, 177, 223);
+}
